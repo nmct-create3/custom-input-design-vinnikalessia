@@ -640,6 +640,8 @@ input::placeholder {
 
 .c-custom-option{
     display: flex;
+    --custom-option-borderColor: var(--global-input-borderColor);
+    --custom-option-focus-borderColor: var(--global-input-focus-borderColor);
 }
 
 /* 
@@ -651,8 +653,9 @@ input::placeholder {
     display: flex;
     width: 16px;
     height: 16px;
-    border: 1px solid #4b4c60;
+    /* border: 1px solid #4b4c60; */
     margin-right: 8px;
+    border: 1px solid var(--custom-option-borderColor);
 }
 
 .c-custom-option__fake-input--checkbox{
@@ -700,6 +703,10 @@ input::placeholder {
 .c-option--hidden:focus-visible + .c-custom-option .c-custom-option__fake-input{
     border-color: blue;
     box-shadow: 0 0 0 5px var(--global-color-alpha-x-transparent);
+}
+
+.c-custom-option:hover {
+    --custom-option-borderColor: var(--custom-option-hover-borderColor);
 }
 
 .c-custom-option__fake-input:hover{
