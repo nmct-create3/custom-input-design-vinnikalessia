@@ -31,7 +31,7 @@
     --global-color-alpha-transparent: hsl(var(--global-color-alpha-hsl) / .75);
     --global-color-alpha-x-transparent: hsl(var(--global-color-alpha-hsl) / .3);
 
-    --global-color-neutral-xxxx-light: #F5F6FA;
+    --global-color-neutral-xxxx-light: #adb5d4;
     --global-color-neutral-xxx-light: #E2E3E7;
     --global-color-neutral-xx-light: #caccd4;
     --global-color-neutral-x-light: #b5b6c0;
@@ -720,6 +720,27 @@ input::placeholder {
 .c-option-list__item{
     margin-bottom: 12px;
 }
+
+/*
+Component: toggle
+---
+*/
+.c-custom-toggle{
+    display: flex;
+}
+
+.c-custom-toggle__fake-input{
+    display: block;
+    height: 24px;
+    width: 48px;
+    margin-right: var(--global-whitespace-md);
+    background-color: #F5F6FA;
+    border-radius: 32px;
+    border: var(--global-borderWidth) solid #caccd4;
+    transition: border var(--global-transition-timing-alpha);
+    box-shadow: grey;
+}
+
 
 /*
 Component: Label
