@@ -770,6 +770,14 @@ Component: toggle
     box-shadow: 0 0 0 5px var(--global-color-alpha-x-transparent);
 }
 
+.c-custom-toggle{
+    margin-bottom: 24px;
+}
+
+.c-custom-toggle__fake-input{
+    margin-bottom: 12px;
+}
+
 /*
 Component: Label
 ---
