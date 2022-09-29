@@ -778,6 +778,11 @@ Component: toggle
     margin-bottom: 12px;
 }
 
+.c-toggle-list__item + .c-toggle-list__item{
+    padding-top: 13px;
+
+}
+
 /*
 Component: Label
 ---
