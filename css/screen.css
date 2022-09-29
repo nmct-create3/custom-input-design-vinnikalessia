@@ -702,7 +702,7 @@ input::placeholder {
     box-shadow: 0 0 0 5px var(--global-color-alpha-x-transparent);
 }
 
-.c-custom-option:hover{
+.c-custom-option__fake-input:hover{
     background-color: hsla(240, 100%, 66%, 0.327);
 }
 
