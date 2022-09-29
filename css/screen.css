@@ -725,9 +725,11 @@ input::placeholder {
 Component: toggle
 ---
 */
+
 .c-custom-toggle{
     display: flex;
 }
+
 
 .c-custom-toggle__fake-input{
     display: block;
@@ -739,8 +741,34 @@ Component: toggle
     border: var(--global-borderWidth) solid #caccd4;
     transition: border var(--global-transition-timing-alpha);
     box-shadow: grey;
+    display: flex;
+    align-items: center;
 }
 
+
+.c-custom-toggle__fake-input::after{
+    height: 25px;
+    width: 25px;
+    background-color: white;
+    box-shadow: 0 0 2px 2px hwb(240 60% 39% / 0.173);
+    border-radius: 50%;
+    display: block;
+    content: "";
+    transition: .2s;
+}
+
+.c-option--hidden:checked + .c-custom-toggle .c-custom-toggle__fake-input::after{
+    transform: translateX(24px);
+}
+
+.c-option--hidden:checked + .c-custom-toggle .c-custom-toggle__fake-input{
+    background-color: #3385FF;
+}
+
+.c-option--hidden:focus-visible + .c-custom-toggle .c-custom-toggle__fake-input{
+    border-color: blue;
+    box-shadow: 0 0 0 5px var(--global-color-alpha-x-transparent);
+}
 
 /*
 Component: Label
