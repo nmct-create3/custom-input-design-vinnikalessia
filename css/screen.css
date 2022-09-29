@@ -706,6 +706,14 @@ input::placeholder {
     background-color: hsla(240, 100%, 66%, 0.327);
 }
 
+.c-option-list{
+    margin-bottom: 24px;
+}
+
+.c-option-list__item{
+    margin-bottom: 12px;
+}
+
 /*
 Component: Label
 ---
