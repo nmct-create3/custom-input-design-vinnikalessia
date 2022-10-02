@@ -750,13 +750,35 @@ Component: option list
 
 .c-custom-select{
     display: flex;
+    position: relative;
+}
+
+.c-custom-select__input{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    border-radius: var(--global-borderRadius);
+    font-family: inherit;
+    font-size: 16px;
+    line-height: calc(var(--global-baseline) * 3);
+    padding: calc(var(--global-baseline) * 1.5 - var(--global-borderWidth)) var(--global-whitespace-md);
+    outline: none;
+    transition: border var(--global-transition-timing-alpha);
+    border: var(--global-borderWidth) solid var(--global-input-borderColor);
+    background-color: var(--global-input-backgroundColor);
+    color: var(--global-input-color);
 }
 
 .c-custom-select__symbol{
     position: absolute;
+    top: 8px;
+    right: 8px;
+    justify-content: center;
+    align-items: center;
     fill: #20223a;
-    width: 36px;
-    height: 28px;
+    width: 32px;
+    line-height: calc(var(--global-baseline) * 3);
 }
 
 /*
