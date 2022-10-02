@@ -632,6 +632,10 @@ input::placeholder {
     box-shadow: 0 0 0 3px var(--global-color-alpha-x-transparent);
 }
 
+.c-input::placeholder{
+    color: var(--global-color-neutral-dark);
+}
+
 /* option input for checkboxes and radio buttons */
 
 .c-option {
@@ -710,7 +714,8 @@ input::placeholder {
 }
 
 .c-custom-option__fake-input:hover{
-    background-color: hsla(240, 100%, 66%, 0.327);
+    box-shadow: 0 0 0 3px var(--global-color-alpha-x-transparent);
+    border: #3385FF solid 2px;
 }
 
 .c-option-list{
