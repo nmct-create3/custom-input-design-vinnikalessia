@@ -718,6 +718,7 @@ input::placeholder {
     border: #3385FF solid 2px;
 }
 
+
 .c-option-list{
     margin-bottom: 24px;
 }
@@ -727,14 +728,44 @@ input::placeholder {
 }
 
 /*
-Component: toggle
+Component: option list
 ---
 */
+.c-select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    border-radius: var(--global-borderRadius);
+    font-family: inherit;
+    font-size: 16px;
+    line-height: calc(var(--global-baseline) * 3);
+    padding: calc(var(--global-baseline) * 1.5 - var(--global-borderWidth)) var(--global-whitespace-md);
+    outline: none;
+    transition: border var(--global-transition-timing-alpha);
+    border: var(--global-borderWidth) solid var(--global-input-borderColor);
+    background-color: var(--global-input-backgroundColor);
+    color: var(--global-input-color);
+}
 
-.c-custom-toggle{
+.c-custom-select{
     display: flex;
 }
 
+.c-custom-select__symbol{
+    position: absolute;
+    fill: #20223a;
+    width: 36px;
+    height: 28px;
+}
+
+/*
+Component: toggle
+---
+*/
+.c-custom-toggle{
+    display: flex;
+}
 
 .c-custom-toggle__fake-input{
     display: block;
