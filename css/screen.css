@@ -632,6 +632,7 @@ input::placeholder {
     box-shadow: 0 0 0 3px var(--global-color-alpha-x-transparent);
 }
 
+/*!!!!!!!!!!!!!!!!!!! darktheme !!!!!!!!!!!!!!!!!!!*/
 .c-input::placeholder{
     color: var(--global-color-neutral-dark);
 }
@@ -770,16 +771,31 @@ Component: option list
     color: var(--global-input-color);
 }
 
+.c-custom-select:focus,
+.c-custom-select:active {
+    border-color: var(--global-color-alpha);
+    box-shadow: 0 0 0 3px var(--global-color-alpha-x-transparent);
+}
+
+.c-custom-select:focus-visible + .c-custom-select__input{
+    --custom-option-borderColor: var(--global-input-focus-borderColor);
+    --custom-option-boxShadow: var(--global-input-focus-boxShadow);
+}
+
 .c-custom-select__symbol{
+    opacity: 1;
     position: absolute;
+    display: flex;
     top: 8px;
     right: 8px;
     justify-content: center;
     align-items: center;
-    fill: #20223a;
+    fill: #3a202f;
     width: 32px;
     line-height: calc(var(--global-baseline) * 3);
+
 }
+
 
 /*
 Component: toggle
