@@ -609,20 +609,20 @@ input::placeholder {
     -moz-appearance: none;
     appearance: none;
     width: 100%;
-    /* border: var(--global-borderWidth) solid var(--global-color-neutral-xxx-light); */
     border-radius: var(--global-borderRadius);
-    /* color: var(--global-color-neutral-xxxx-dark); */
-    /* background-color: White; */
     font-family: inherit;
     font-size: 16px;
     line-height: calc(var(--global-baseline) * 3);
     padding: calc(var(--global-baseline) * 1.5 - var(--global-borderWidth)) var(--global-whitespace-md);
     outline: none;
     transition: border var(--global-transition-timing-alpha);
-    
     border: var(--global-borderWidth) solid var(--global-input-borderColor);
     background-color: var(--global-input-backgroundColor);
     color: var(--global-input-color);
+
+    /* border: var(--global-borderWidth) solid var(--global-color-neutral-xxx-light); */
+    /* color: var(--global-color-neutral-xxxx-dark); */
+    /* background-color: White; */
 }
 
 
@@ -754,6 +754,12 @@ Component: option list
     position: relative;
 }
 
+.c-custom-select:focus,
+.c-custom-select:active {
+    border-color: var(--global-color-alpha);
+    box-shadow: 0 0 0 3px var(--global-color-alpha-x-transparent);
+}
+
 .c-custom-select__input{
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -771,11 +777,6 @@ Component: option list
     color: var(--global-input-color);
 }
 
-.c-custom-select:focus,
-.c-custom-select:active {
-    border-color: var(--global-color-alpha);
-    box-shadow: 0 0 0 3px var(--global-color-alpha-x-transparent);
-}
 
 .c-custom-select:focus-visible + .c-custom-select__input{
     --custom-option-borderColor: var(--global-input-focus-borderColor);
@@ -783,19 +784,18 @@ Component: option list
 }
 
 .c-custom-select__symbol{
+    pointer-events: none;
     opacity: 1;
     position: absolute;
     display: flex;
     top: 8px;
-    right: 8px;
+    right: -4px;
     justify-content: center;
     align-items: center;
     fill: #3a202f;
-    width: 32px;
+    width: 28px;
     line-height: calc(var(--global-baseline) * 3);
-
 }
-
 
 /*
 Component: toggle
