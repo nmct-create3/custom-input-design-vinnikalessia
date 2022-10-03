@@ -114,6 +114,12 @@ html {
         --global-page-color: white;
         --global-page-backgroundColor: var(--color-neutral-xxxx-dark);
     }
+    
+    .c-logo {
+        --logo__path--1--fill: White;
+        --logo__path--2--fill: var(--logo__path--1--fill);
+        --logo__path--3--fill: var(--logo__path--1--fill);
+      }
 }
 
 *,
@@ -544,6 +550,18 @@ input::placeholder {
 }
 
 .c-logo__path--1 {
+    fill: var(--logo__path--1--fill, var(--global-color-neutral-xxxx-dark));
+}
+  
+.c-logo__path--2 {
+    fill: var(--logo__path--2--fill, var(--global-color-alpha));
+}
+  
+.c-logo__path--3 {
+    fill: var(--logo__path--3--fill, var(--global-color-alpha-x-dark));
+}
+
+/* .c-logo__path--1 {
     fill: var(--global-color-neutral-xxxx-dark);
 }
 
@@ -553,7 +571,8 @@ input::placeholder {
 
 .c-logo__path--3 {
     fill: var(--global-color-alpha-x-dark);
-}
+} */
+
 
 /*
     Component: Card
