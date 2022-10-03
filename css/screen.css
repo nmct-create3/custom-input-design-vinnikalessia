@@ -111,15 +111,16 @@ html {
         background-color: var(--color-neutral-xxxx-dark);
     } */
     :root {
-        --global-page-color: white;
+        /* --global-page-color: white; */
+        --global-page-color: black;
         --global-page-backgroundColor: var(--color-neutral-xxxx-dark);
     }
-    
+
     .c-logo {
         --logo__path--1--fill: White;
         --logo__path--2--fill: var(--logo__path--1--fill);
         --logo__path--3--fill: var(--logo__path--1--fill);
-      }
+    }
 }
 
 *,
