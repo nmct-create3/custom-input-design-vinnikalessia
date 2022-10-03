@@ -75,6 +75,12 @@
     /*  = 48px */
     --global-whitespace-xxl: calc(var(--global-whitespace) * 3);
     /*  = 72px */
+
+    --color-neutral-xxxx-light: white;
+    --color-neutral-xxxx-dark: rgb(35, 69, 92);
+
+    --global-page-color: var(--color-neutral-xxxx-dark);
+    --global-page-backgroundColor: var(--color-neutral-xxxx-light);
 }
 
 /*------------------------------------*\
@@ -95,6 +101,19 @@ html {
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
+    color: var(--global-page-color); 
+    background-color: var(--global-page-backgroundColor);
+}
+
+@media (prefers-color-scheme: dark) {
+    /* html {
+        background-color: var(--color-neutral-xxxx-dark);
+    } */
+    :root {
+        --global-page-color: white;
+        --global-page-backgroundColor: var(--color-neutral-xxxx-dark);
+    }
 }
 
 *,
