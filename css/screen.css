@@ -76,12 +76,15 @@
     --global-whitespace-xxl: calc(var(--global-whitespace) * 3);
     /*  = 72px */
 
-    --color-neutral-xxxx-light: white;
-    --color-neutral-xxxx-dark: rgb(35, 69, 92);
+    /*bij normale omstandigheden:*/
+    --color-neutral-xxxx-light: white; /*pagina kleur*//*kaartkleur*/
+    --color-neutral-xxxx-dark: #20223A; /*tekst*/
 
     --global-page-color: var(--color-neutral-xxxx-dark);
     --global-page-backgroundColor: var(--color-neutral-xxxx-light);
+    --global-card-backgroundColor: var(--color-neutral-xxxx-light);
 }
+
 
 /*------------------------------------*\
 #GENERIC
@@ -106,13 +109,10 @@ html {
     background-color: var(--global-page-backgroundColor);
 }
 
+/*niet bij normale omstandigheden*/
 @media (prefers-color-scheme: dark) {
-    /* html {
-        background-color: var(--color-neutral-xxxx-dark);
-    } */
     :root {
-        /* --global-page-color: white; */
-        --global-page-color: black;
+        --global-page-color: #20223A;
         --global-page-backgroundColor: var(--color-neutral-xxxx-dark);
     }
 
@@ -120,6 +120,32 @@ html {
         --logo__path--1--fill: White;
         --logo__path--2--fill: var(--logo__path--1--fill);
         --logo__path--3--fill: var(--logo__path--1--fill);
+    }
+
+    .c-card{
+        --global-card-backgroundColor: #35374D;
+    }
+
+    .c-card__title{
+        color: white;
+    }
+
+    .c-input{
+        --global-input-backgroundColor: #20223A;
+        --global-input-borderColor: #20223A;
+    }
+
+    .c-label{
+        --global-color-neutral-xx-dark: #7B7C8C;
+    }
+
+    .c-custom-option__fake-input{
+        --custom-option-borderColor: #20223A;
+        background-color: #20223A;
+    }
+
+    .c-card__footer{
+        --global-color-neutral-xxx-light: #20223A;
     }
 }
 
@@ -582,7 +608,8 @@ input::placeholder {
 */
 
 .c-card {
-    background-color: White;
+    /* background-color: White; */
+    background-color: var(--global-card-backgroundColor);
     margin-bottom: var(--global-whitespace);
     border-radius: var(--global-borderRadius);
     box-shadow: 0 0 0 var(--global-borderWidth) rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, .075);
